@@ -123,12 +123,12 @@
               </div>
               <p class="text-label">Quelles villes ?</p>
               <div
-                class="formData" id="city">
+                class="formData group" id="city">
                 <input
                   class="checkbox-input"
                   type="radio"
                   id="location1"
-                  name="location"
+                  name="action"
                   value="New York"
                 />
                 <label class="checkbox-label" for="location1">
@@ -139,9 +139,8 @@
                   class="checkbox-input"
                   type="radio"
                   id="location2"
-                  name="location"
+                  name="action"
                   value="San Francisco"
-                  checked
                 />
                 <label class="checkbox-label" for="location2">
                   <span class="checkbox-icon"></span>
@@ -151,7 +150,7 @@
                   class="checkbox-input"
                   type="radio"
                   id="location3"
-                  name="location"
+                  name="action"
                   value="Seattle"
                 />
                 <label class="checkbox-label" for="location3">
@@ -162,7 +161,7 @@
                   class="checkbox-input"
                   type="radio"
                   id="location4"
-                  name="location"
+                  name="action"
                   value="Chicago"
                 />
                 <label class="checkbox-label" for="location4">
@@ -173,7 +172,7 @@
                   class="checkbox-input"
                   type="radio"
                   id="location5"
-                  name="location"
+                  name="action"
                   value="Boston"
                 />
                 <label class="checkbox-label" for="location5">
@@ -184,28 +183,29 @@
                   class="checkbox-input"
                   type="radio"
                   id="location6"
-                  name="location"
+                  name="action"
                   value="Portland"
                 />
                 <label class="checkbox-label" for="location6">
                   <span class="checkbox-icon"></span>
                   Portland</label
                 >
+                <small id="condition2"></small>
               </div>
-              <small></small>
               <div
                 class="formData" id="checkbox5">
                 <input
                   class="checkbox-input"
                   type="checkbox"
                   id="checkbox1"
-                  checked
                 />
                 <label class="checkbox2-label" for="checkbox1">
                   <span class="checkbox-icon"></span>
                   J'ai lu et accepté les conditions d'utilisation.
                 </label>
-                <br>
+                <small id="condition"></small>
+              </div>
+              <div>
                 <input class="checkbox-input" type="checkbox" id="checkbox2" checked/>
                 <label class="checkbox2-label" for="checkbox2">
                   <span class="checkbox-icon"></span>

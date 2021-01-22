@@ -54,8 +54,8 @@ function checkInputs() {
   const emailValue = email.value.trim();
   const birthdateValue = birthdate.value.trim();
   const quantityValue = quantity.value.trim();
-  const cityValue = city.value.trim();
-  const checkboxValue = checkbox.value.trim();
+  const cityValue = city;
+  const checkboxValue = checkbox;
 
   if (firstValue.length < 2) {
     setErrorFor(first, "Votre prénom doit comporter au minimum 2 caractères.");
@@ -103,14 +103,14 @@ function checkInputs() {
     quantity.style.border = "none";
   }
 
-  if (cityValue === '') {
-    setErrorFor(city, "Erreur. Veuillez saisir un nombre ou un chiffre.");
+  if (!isRadioChecked(cityValue)) {
+    setErrorFor(city, "Erreur. Veuillez sélectionner au moins une ville");
   } else {
     setSuccessFor(city);
   }
 
-  if (checkboxValue === '') {
-    setErrorFor(checkbox, "Erreur. Veuillez sélectionner au minimum une ville.");
+  if (checkboxValue.checked === false) {
+    setErrorFor(checkbox, "Vous devez accepter les conditions d'utilisation");
   } else {
     setSuccessFor(checkbox);
   }
@@ -125,8 +125,6 @@ function checkInputs() {
   }
 
 }
-
-
 
 function setErrorFor(input, message) {
   const formControl = input.parentElement;
@@ -147,4 +145,8 @@ function isEmail(email) {
 
 function isBirthday(birthdate) {
   return /^(0?[1-9]|[12][0-9]|3[01])[\/\-](0?[1-9]|1[012])[\/\-]\d{4}$/.test(birthdate);
+}
+
+function isRadioChecked(city) {
+return document.querySelectorAll("input[type=radio]:checked").length > 0;
 }
